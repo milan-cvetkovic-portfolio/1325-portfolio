@@ -1,10 +1,172 @@
-body {
-  background-color: #c73846;
-  }
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-size: 18px;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
-.slika-portfolio { text-align: center; 
-                 } 
+
+/* Navigacioni meni */
+nav {
+    background-color: #ff0000;
+    position: fixed;         /* fiksiran na vrhu */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 10;
+}
+
+/* Lista linkova */
+.navigacija {
+    list-style: none;
+    display: flex;
+    justify-content: left;  /* centrirano sa leve strane */
+    gap: 50px;              /* razmak između linkova */
+    margin: 0;
+    padding: 0;
+}
+
+/* Linkovi u meniju */
+.navigacija a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Efekat prelaska mišem */
+.navigacija a:hover {
+    color: #680300;  /* promena boje pri hoveru */
+}
+
+/* slika pri vrhu, centrirana horizontalno */
+.slika img {
+    display: block;            /* da margin auto radi */
+    margin: 50px auto 20px;    /* 20px od vrha i ispod slike, centrirano */
+    max-width: 300px;          /* prilagodi veličinu slike */
+    height: auto;              /* proporcionalno smanjenje */
+}
+
+/* div sa sadržajem */
+.slika {
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto;            /* centriranje horizontalno */
+    padding: 20px 30px;
+    text-align: center;        /* centrira tekst i listu unutar diva */
+}
+
+/* naslov */
+.slika h1 {
+    color: #ff0000;
+    margin: 10px 0 20px 0;
+}
+
+/* Sekcija O meni */
+.omeni {
+    max-width: 900px;        /* ograničava širinu teksta */
+    margin: 100px auto;      /* centriranje sekcije */
+    padding: 30px 40px;      /* unutrašnji razmak */
+    background-color: #292b34;
+    border-radius: 10px;
+}
+
+/* Svi paragrafi */
+.omeni p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;        /* razmak između redova */
+    margin-bottom: 20px;
+    text-align: justify;     /* poravnanje kao u knjizi */
+}
+
+/* Uvodni paragraf */
+#uvod {
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 40px;       /* uvlačenje prvog reda */
+}
+
+footer {
+    background-color: #292b34;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 200px;
+    font-family: Arial, sans-serif;
+}
+
+/* footer span-ovi razdvojeni */
+footer span {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Sekcija O meni */
+.omeni {
+    width: 80%;
+    margin: 100px auto;
+    background-color: #292b34;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.profilna {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+}
+
+.omeni p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+
+
+
+/* Sekcija Moja interesovanja */
+.interesovanja {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 30px 40px;
+    background-color: #df1414;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.interesovanja p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* GRID: 2 slike gore + 2 dole */
+.slike-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center; /* centriranje slika u ćelijama */
+}
+
+/* Slike */
+.slike-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ff0000;
+}
+
+/* Da na telefonu budu jedna ispod druge */
+@media (max-width: 650px) {
+    .slike-grid {
+        grid-template-columns: 1fr;
+    }
+}
